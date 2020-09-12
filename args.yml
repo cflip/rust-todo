@@ -1,0 +1,23 @@
+name: rust-todo
+version: "0.1.0"
+author: Cflip
+about: A command line todo list written in Rust
+args:
+    - file:
+        help: The .todo file to use
+        multiple: false
+        required: true
+    - view:
+        help: Shows the name and description of an item
+        short: v
+        long: view
+        value_name: INDEX
+        takes_value: true
+        empty_values: false
+    - edit:
+        help: Makes changes to the specified item
+        short: e
+        long: edit
+        value_name: INDEX
+        takes_value: true
+        empty_values: false
