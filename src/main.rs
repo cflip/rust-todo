@@ -8,6 +8,9 @@ fn main() {
 
     let file_path = matches.value_of("file").unwrap().to_string();
     let todo_list = todo::TodoList::from_file(&file_path).unwrap();
+    for item in todo_list.as_vec() {
+        println!("{:?}", item);
+    }
 
     matches.value_of("view").and_then(|index| -> Option<&str> {
         println!("Viewing index #{}", index);
