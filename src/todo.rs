@@ -1,8 +1,8 @@
 #[derive(Debug, Clone)]
 pub struct TodoItem {
-	name: String,
-	desc: String,
-	complete: bool,
+	pub name: String,
+	pub desc: String,
+	pub complete: bool,
 }
 
 impl TodoItem {
