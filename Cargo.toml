@@ -1,5 +1,5 @@
 [package]
-name = "rtodo"
+name = "rust-todo"
 version = "0.1.0"
 authors = ["Cflip"]
 edition = "2018"
