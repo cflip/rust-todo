@@ -1,5 +1,6 @@
 use clap::{load_yaml, App};
 
+mod file;
 mod todo;
 
 fn main() {
@@ -7,8 +8,8 @@ fn main() {
 	let matches = App::from_yaml(args_yaml).get_matches();
 
 	let file_path = matches.value_of("file").unwrap().to_string();
-	let todo_list = todo::TodoList::from_file(&file_path).unwrap();
-	for item in todo_list.as_vec() {
+	let todo_list = file::read_todo_file(&file_path);
+	for item in todo_list {
 		println!("{:?}", item);
 	}
 
