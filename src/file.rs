@@ -2,6 +2,7 @@ use crate::todo::TodoItem;
 use std::fs;
 use std::path::PathBuf;
 
+#[derive(Debug)]
 pub enum TodoFileError {
 	InvalidFormat(String),
 }
